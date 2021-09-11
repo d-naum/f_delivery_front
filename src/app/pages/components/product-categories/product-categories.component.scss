@@ -1,0 +1,46 @@
+mat-card{
+    margin:5px
+}
+
+
+
+mat-icon{
+    cursor: pointer;
+}
+
+.edit-icon{
+    color:rgb(12, 125, 196);
+    font-size:16px;
+    margin-right:5px;
+    width:auto;
+    height: auto;
+}
+
+.fastfood{
+    color: #fafafa;
+    background: #2eb8ab;
+    width: 36px;
+    height: 36px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.clear-icon{
+    color:rgb(181, 51, 51);
+    font-size:16px;
+    width:auto;
+    height: auto;
+}
+
+.add-icon{
+    color:rgb(26, 162, 76);
+    font-size:26px;
+}
+
+.add-new{
+    cursor:  pointer;
+}

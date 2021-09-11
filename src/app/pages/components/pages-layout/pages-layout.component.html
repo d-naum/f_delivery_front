@@ -1,0 +1,23 @@
+<div class="body">
+    <mat-drawer-container class="app-container" autosize>
+        <mat-drawer #drawer class="app-sidenav" mode="side" opened="true">
+            <app-sidebar></app-sidebar>
+        </mat-drawer>
+        <div class="header-wrapper">
+            <mat-toolbar>
+                <button mat-icon-button mat-button (click)="drawer.toggle()" class="toggle-button text-primay"
+                    aria-label="toggle menu">
+                    <mat-icon class="menu-icon">menu</mat-icon>
+                </button>
+                <div class="header-content-wrapper">
+                    <app-header fxLayout="row" class="header-content"></app-header>
+                </div>
+            </mat-toolbar>
+        </div>
+        <div class="main-body">
+            <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+
+    </mat-drawer-container>
+</div>

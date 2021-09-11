@@ -1,0 +1,51 @@
+<div class="page-header">
+    <h1>Product Addons</h1>
+    <div class="head-actions">
+        <button (click)="addAddon()" mat-raised-button color="primary">
+            <mat-icon>add_circle</mat-icon>
+            Add Addon
+        </button>
+    </div>
+</div>
+<mat-form-field appearance="fill">
+    <mat-label>Search</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+</mat-form-field>
+<div class="mat-elevation-z0">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Title </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef> Price </th>
+            <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let element">
+                <div class="table-action-wrapper">
+                    <button matTooltip="Edit Addon" (click)="editAddon(element.id)" matTooltipPosition="above"
+                        mat-mini-fab color="accent">
+                        <mat-icon class="edit-icon">edit</mat-icon>
+                    </button>
+                    <button matTooltip="Delete Addon" (click)="deleteAddon(element.id)" matTooltipPosition="above"
+                        mat-mini-fab color="warn">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of Addons"></mat-paginator>
+</div>

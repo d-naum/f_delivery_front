@@ -1,0 +1,28 @@
+<div class="form-wrapper" fxLayout="row wrap" fxLayoutAlign="space-between center">
+
+    <mat-form-field class="input-100" appearance="outline">
+        <mat-label>Brand Name</mat-label>
+        <input matInput required [formControl]="brandName" placeholder="Brand Name">
+    </mat-form-field>
+
+    <mat-form-field class="input-50" appearance="outline">
+        <mat-label>Contact</mat-label>
+        <input matInput [formControl]="contact" placeholder="Contact">
+    </mat-form-field>
+
+    <mat-form-field class="input-50" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput [formControl]="email" placeholder="Email">
+    </mat-form-field>
+    <mat-form-field class="input-100" appearance="outline">
+        <mat-label>Address</mat-label>
+        <input matInput [formControl]="address" placeholder="Address">
+    </mat-form-field>
+    <mat-form-field class="input-100" appearance="outline">
+        <mat-label>PayPal Client ID (client_id)</mat-label>
+        <input matInput [formControl]="paypalClientId" placeholder="PayPal client_id">
+    </mat-form-field>
+</div>
+<div fxLayoutAlign="flex-end center">
+    <button (click)="saveSettings()" mat-raised-button color="primary">{{isSaving}}</button>
+</div>

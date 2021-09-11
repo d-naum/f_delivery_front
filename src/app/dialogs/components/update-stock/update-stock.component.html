@@ -1,0 +1,18 @@
+<h3>Update Stock</h3>
+<div fxLayoutAlign="space-between center">
+    <mat-form-field fxFlex="48" class="full-width">
+        <mat-label>Available Stock</mat-label>
+        <input type="number" matInput [formControl]="available">
+        <mat-error *ngIf="available.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex="48" class="full-width">
+        <mat-label>New Stock</mat-label>
+        <input type="number" matInput [formControl]="newStock">
+        <mat-error *ngIf="newStock.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+</div>
+<div mat-dialog-footer fxLayoutAlign="end end">
+    <button mat-raised-button color="primary">
+        Update
+    </button>
+</div>

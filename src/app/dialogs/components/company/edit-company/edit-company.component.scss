@@ -1,0 +1,52 @@
+.full-width{
+    width:100%
+}
+
+mat-form-field{
+    margin-bottom: 20px;
+}
+
+.half-field-wrapper{
+    display: flex;
+    justify-content:space-between;
+}
+
+.half-width{
+    width: 45%;
+}
+
+.fourth-width{
+    width: 25%;
+}
+
+.third-width{
+    width: 32%;
+}
+
+.add-on-wrapper mat-selection-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.add-on-wrapper mat-list-option[aria-selected="false"] {
+    flex: 0 100%;
+    border: solid;
+    border-width: 1px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-color: #673bb7;
+}
+
+.add-on-wrapper mat-list-option[aria-selected="true"] {
+    flex: 0 100%;
+    border: solid;
+    border-width: 1px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-color: #673bb7;
+    color:white;
+    background: #673bb7;
+}
+
+

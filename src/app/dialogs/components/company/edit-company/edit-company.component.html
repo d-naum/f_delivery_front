@@ -1,0 +1,122 @@
+<h3>Add New Company</h3>
+<div mat-dialog-content>
+    <mat-stepper orientation="vertical">
+        <mat-step>
+            <ng-template matStepLabel>Company Details</ng-template>
+            <ng-template matStepContent>
+                <div class="add-product-form">
+                    <!-- <div class="half-field-wrapper">
+                        <mat-form-field appearance="fill" class="half-width">
+                            <mat-label>Company Email</mat-label>
+                            <input matInput required [formControl]="email">
+                            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="half-width">
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" required [formControl]="password">
+                            <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+                    </div> -->
+
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Company Name</mat-label>
+                        <input matInput required [formControl]="name">
+                        <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Imprint</mat-label>
+                        <textarea matInput required [formControl]="imprint"></textarea>
+                        <mat-error *ngIf="imprint.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+
+                    <div class="half-field-wrapper">
+                        <mat-form-field appearance="fill" floatLabel="always" class="half-width">
+                            <mat-label>Min Delivery Amount</mat-label>
+                            <input matInput required [formControl]="minDeliveryAmount" type="number"
+                                class="example-right-align">
+                            <mat-error *ngIf="minDeliveryAmount.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" floatLabel="always" class="half-width">
+                            <mat-label>Status</mat-label>
+                            <mat-select required [formControl]="status">
+                                <mat-option value="Active">Active</mat-option>
+                                <mat-option value="Inactive">Inactive</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="status.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+
+                    </div>
+
+                </div>
+            </ng-template>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Delivery Times</ng-template>
+            <ng-template matStepContent>
+                <div class="delivery-times-wrapper" *ngFor='let time of deliveryTimes.items;let ind=index;'>
+                    <mat-form-field appearance="fill" class="third-width">
+                        <mat-label>Day</mat-label>
+                        <select matNativeControl required [formControl]="time.day">
+                            <option value="Mon">Mon</option>
+                            <option value="Tue">Tue</option>
+                            <option value="Wed">Wed</option>
+                            <option value="Thu">Thu</option>
+                            <option value="Fri">Fri</option>
+                            <option value="Sat">Sat</option>
+                            <option value="Sun">Sun</option>
+                        </select>
+                        <mat-error *ngIf="time.day.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="third-width">
+                        <mat-label>Start Time</mat-label>
+                        <input matInput required [formControl]="time.startTime" [ngxTimepicker]="picker">
+                        <ngx-material-timepicker #picker></ngx-material-timepicker>
+                        <mat-error *ngIf="time.startTime.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="third-width">
+                        <mat-label>End Time</mat-label>
+                        <input matInput required [formControl]="time.endTime" [ngxTimepicker]="pickerend">
+                        <ngx-material-timepicker #pickerend></ngx-material-timepicker>
+                        <mat-error *ngIf="time.endTime.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxLayoutAlign="end center">
+                    <button (click)="addTiming()" mat-button color="primary">
+                        <mat-icon>add_circle</mat-icon> Add More
+                    </button>
+                </div>
+            </ng-template>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Delivery Postcodes</ng-template>
+            <ng-template matStepContent>
+                <div class="delivery-times-wrapper" *ngFor='let postcode of deliveryPostcodes.items;let ind=index;'>
+                    <mat-form-field appearance="fill" class="third-width">
+                        <mat-label>Postcode</mat-label>
+                        <input matInput required [formControl]="postcode.number">
+                        <mat-error *ngIf="postcode.number.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="third-width">
+                        <mat-label>Longitude</mat-label>
+                        <input matInput required [formControl]="postcode.long">
+                        <mat-error *ngIf="postcode.long.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="third-width">
+                        <mat-label>Latitude</mat-label>
+                        <input matInput required [formControl]="postcode.lat">
+                        <mat-error *ngIf="postcode.lat.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxLayoutAlign="end center">
+                    <button (click)="addDelivery()" mat-button color="primary">
+                        <mat-icon>add_circle</mat-icon> Add More
+                    </button>
+                </div>
+            </ng-template>
+        </mat-step>
+    </mat-stepper>
+</div>
+<div mat-dialog-footer fxLayoutAlign="end end">
+    <button (click)="updateCompany()" mat-raised-button color="primary">Create Company</button>
+</div>

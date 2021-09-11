@@ -1,0 +1,20 @@
+<h3 mat-dialog-title>Edit Addon</h3>
+<div mat-dialog-content>
+    <mat-form-field appearance="fill" class="form-input">
+        <mat-label>Title</mat-label>
+        <input matInput required [formControl]="name">
+        <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" floatLabel="always" class="form-input">
+        <mat-label>Price</mat-label>
+        <input matInput required [formControl]="price" type="number" class="example-right-align" placeholder="0">
+        <span matPrefix>$&nbsp;</span>
+        <span matSuffix>.00</span>
+        <mat-error *ngIf="price.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+</div>
+<div mat-dialog-footer fxLayoutAlign="end end">
+    <button (click)="updateAddon()" mat-raised-button color="primary">
+        Update Addon
+    </button>
+</div>

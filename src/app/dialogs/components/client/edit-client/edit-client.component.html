@@ -1,0 +1,100 @@
+<h3>Edit Client</h3>
+<div mat-dialog-content>
+    <mat-stepper orientation="vertical">
+        <mat-step>
+            <ng-template matStepLabel>Client Details</ng-template>
+            <ng-template matStepContent>
+                <div class="add-product-form">
+                    <div class="half-field-wrapper">
+                        <mat-form-field appearance="fill" class="half-width">
+                            <mat-label>First Name</mat-label>
+                            <input matInput required [formControl]="firstName">
+                            <mat-error *ngIf="firstName.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" class="half-width">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput required [formControl]="lastName">
+                            <mat-error *ngIf="lastName.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" floatLabel="always" class="half-width">
+                            <mat-label>Email</mat-label>
+                            <input matInput required [formControl]="email" type="text" class="example-right-align">
+                            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" floatLabel="always" class="half-width">
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" required [formControl]="password" type="password"
+                                class="example-right-align">
+                            <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" floatLabel="always" class="half-width">
+                            <mat-label>Phone</mat-label>
+                            <input matInput required [formControl]="phone" type="text" class="example-right-align">
+                            <mat-error *ngIf="phone.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" floatLabel="always" class="half-width">
+                            <mat-label>Company</mat-label>
+                            <input matInput required [formControl]="company" type="text" class="example-right-align">
+                            <mat-error *ngIf="company.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" floatLabel="always" class="half-width">
+                            <mat-label>Note</mat-label>
+                            <input matInput required [formControl]="note" type="text" class="example-right-align">
+                            <mat-error *ngIf="note.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" floatLabel="always" class="half-width">
+                            <mat-label>Preffered Delivery Time</mat-label>
+                            <input matInput required [formControl]="prferredDeliveryTime" type="text"
+                                class="example-right-align">
+                            <mat-error *ngIf="prferredDeliveryTime.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+
+                    </div>
+                </div>
+            </ng-template>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Client Address</ng-template>
+            <ng-template matStepContent>
+                <div class="half-field-wrapper">
+                    <mat-form-field appearance="fill" class="half-width">
+                        <mat-label>Street</mat-label>
+                        <input matInput required [formControl]="street">
+                        <mat-error *ngIf="street.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="half-width">
+                        <mat-label>Street No.</mat-label>
+                        <input matInput required [formControl]="streetNo" type="number">
+                        <mat-error *ngIf="streetNo.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="half-width">
+                        <mat-label>City</mat-label>
+                        <input matInput required [formControl]="city">
+                        <mat-error *ngIf="city.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="half-width">
+                        <mat-label>PostCode</mat-label>
+                        <input matInput required [formControl]="postCode" type="number">
+                        <mat-error *ngIf="postCode.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="half-width">
+                        <mat-label>Floor</mat-label>
+                        <input matInput required [formControl]="floor">
+                        <mat-error *ngIf="floor.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                </div>
+            </ng-template>
+        </mat-step>
+
+    </mat-stepper>
+</div>
+<div mat-dialog-footer fxLayoutAlign="end end">
+    <button (click)="updateClient()" mat-raised-button color="primary">Update Client</button>
+</div>

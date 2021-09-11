@@ -1,0 +1,159 @@
+/* You can add global styles to this file, and also import other style files */
+
+$primary-color: #3f00bd;
+$danger-color: #a42828;
+$success-color: #28a44f;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.body{
+    background:rgb(237, 237, 237);
+}
+
+
+
+.main-body{
+    padding: 40px;
+    min-height:80vh;
+}
+
+.text-primary{
+   color: $primary-color;
+}
+
+
+.mat-tree-node .mat-button-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mat-tree-node .mat-button-wrapper span {
+    flex: 1;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.mat-tree-node button .mat-button-wrapper {
+    flex: 1 !important;
+    justify-content: flex-start !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+span.mat-button-wrapper span {
+    flex: 1 !important;
+    text-align: left !important;
+    margin-left: 10px;
+    color: #535353;
+    font-weight: 400;
+}
+
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.page-header h1 {
+    margin: 0;
+}
+
+.head-actions button {
+    margin-left: 10px;
+}
+
+td.mat-column-action {
+    width: 15%;
+}
+
+.table-action-wrapper {
+    padding: 8px;
+}
+
+.table-action-wrapper button, .table-action-wrapper a {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.table-action-wrapper .mat-button-wrapper {
+    padding: 0;
+}
+
+.table-action-wrapper .mat-icon {
+    font-size: 16px;
+}
+
+.success-snackbar{
+    background:rgb(50, 131, 50);
+    color:white;
+}
+
+.danger-btn{
+    background: #c43f3f;
+    color:white
+  }
+
+.modal-footer{
+    display:flex;
+    justify-content:center;
+    button{ 
+        margin: 0 10px
+    }
+}
+
+.text-center{
+    text-align:center;
+}
+
+.modal-heading{
+    margin-bottom:20px !important;
+}
+
+.mat-pseudo-checkbox-checked, .mat-pseudo-checkbox-indeterminate, .mat-accent .mat-pseudo-checkbox-checked, .mat-accent .mat-pseudo-checkbox-indeterminate {
+    background: #673bb7;
+}
+
+.add-on-wrapper.ng-star-inserted .mat-list-text {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+}
+
+.add-on-wrapper.ng-star-inserted mat-selection-list {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.mat-vertical-content {
+    padding: 10px 24px !important;
+}
+
+.mat-step-header {
+    padding-top: 5px !important;
+}
+
+.timepicker-overlay {
+    z-index: 1100 !important;
+  }
+  
+  .timepicker-backdrop-overlay {
+    z-index: 1100 !important;
+  }
+
+  .mat-drawer-side {
+    border-right: none !important;
+  }
+
+  .mat-drawer {
+    background: #25202e;
+  }
+
+
+  .mat-dialog-container {
+    overflow: visible !important;
+}

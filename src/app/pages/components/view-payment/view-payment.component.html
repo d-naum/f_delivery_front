@@ -1,0 +1,45 @@
+<div class="main-wrapper" fxLayoutAlign="center flex-start">
+    <div class="inner-wrapper">
+        <!-- Payment Info -->
+        <div class="header" fxLayoutAlign="flex-start center">
+            <mat-icon>local_atm</mat-icon>
+            <span>PAYMENT</span>
+        </div>
+
+        <div class="amount-wrapper" fxLayoutAlign="flex-start center">
+            <h1>${{payment.amount}}</h1>
+            <span class="status-tag">{{payment.paymentStatus.name}}</span>
+        </div>
+
+        <div class="customer-info">
+            <div class="info-wrapper">
+                <span>Date & Time</span>
+                <span>{{payment.dateTime}}</span>
+            </div>
+            <div class="info-wrapper">
+                <span>Order Id</span>
+                <span>{{payment.order.id}}</span>
+            </div>
+            <div class="info-wrapper">
+                <span>Coupon Code</span>
+                <span>{{payment.coupon ? payment.coupon.number : 'N/A'}}</span>
+            </div>
+            <div class="info-wrapper">
+                <span>Company Name</span>
+                <span>{{payment.company.name}}</span>
+            </div>
+            <div class="info-wrapper">
+                <span>Customer Name</span>
+                <span>{{payment.client.firstName}} {{payment.client.lastName}}</span>
+            </div>
+            <div class="info-wrapper">
+                <span>Email</span>
+                <span>{{payment.client.email}}</span>
+            </div>
+            <div class="info-wrapper">
+                <span>Contact</span>
+                <span>{{payment.client.contact}}</span>
+            </div>
+        </div>
+    </div>
+</div>

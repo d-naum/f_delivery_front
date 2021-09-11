@@ -1,0 +1,103 @@
+<div class="sidebar-wrapper">
+    <h1 class="branding-logo">
+        <img src="assets/FoodLogo.png" />
+    </h1>
+</div>
+<div class="sidebar-list">
+    <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+            <a routerLink="/dashboard" class="link-wrapper">
+                <mat-icon mat-list-icon>query_stats</mat-icon>
+                <span class="full-width" *ngIf="isExpanded || isShowing">Dashboard</span>
+            </a>
+        </mat-list-item>
+    </mat-nav-list>
+
+    <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+            <a [routerLink]="['/products']" class="link-wrapper">
+                <mat-icon mat-list-icon>lunch_dining</mat-icon>
+                <span class="full-width" *ngIf="isExpanded || isShowing">Products</span>
+            </a>
+        </mat-list-item>
+    </mat-nav-list>
+
+    <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+            <a [routerLink]="['/product-addons']" class="link-wrapper">
+                <mat-icon mat-list-icon>add_circle</mat-icon>
+                <span class="full-width" *ngIf="isExpanded || isShowing">Product Addons</span>
+            </a>
+        </mat-list-item>
+    </mat-nav-list>
+
+    <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+            <a [routerLink]="['/product-categories']" class="link-wrapper">
+                <mat-icon mat-list-icon>fastfood</mat-icon>
+                <span class="full-width" *ngIf="isExpanded || isShowing">Product Categories</span>
+            </a>
+        </mat-list-item>
+    </mat-nav-list>
+
+    <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+            <a [routerLink]="['/companies']" class="link-wrapper">
+                <mat-icon mat-list-icon>storefront</mat-icon>
+                <span class="full-width" *ngIf="isExpanded || isShowing">Companies</span>
+            </a>
+        </mat-list-item>
+    </mat-nav-list>
+
+    <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+            <a [routerLink]="['/clients']" class="link-wrapper">
+                <mat-icon mat-list-icon>account_box</mat-icon>
+                <span class="full-width" *ngIf="isExpanded || isShowing">Clients</span>
+            </a>
+        </mat-list-item>
+    </mat-nav-list>
+
+    <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+            <a [routerLink]="['/coupons']" class="link-wrapper">
+                <mat-icon mat-list-icon>local_offer</mat-icon>
+                <span class="full-width" *ngIf="isExpanded || isShowing">Coupons</span>
+            </a>
+        </mat-list-item>
+    </mat-nav-list>
+
+    <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+            <a [routerLink]="['/payments']" class="link-wrapper">
+                <mat-icon mat-list-icon>account_balance_wallet</mat-icon>
+                <span class="full-width" *ngIf="isExpanded || isShowing">Payments</span>
+            </a>
+        </mat-list-item>
+    </mat-nav-list>
+
+    <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+            <a [routerLink]="['/orders']" class="link-wrapper">
+                <mat-icon mat-list-icon>room_service</mat-icon>
+                <span class="full-width" *ngIf="isExpanded || isShowing">Orders</span>
+            </a>
+        </mat-list-item>
+    </mat-nav-list>
+
+    <mat-nav-list *ngIf="isCompany">
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+            <a [routerLink]="['/settings']" class="link-wrapper">
+                <mat-icon mat-list-icon>settings</mat-icon>
+                <span class="full-width" *ngIf="isExpanded || isShowing">Settings</span>
+            </a>
+        </mat-list-item>
+    </mat-nav-list>
+
+    <mat-nav-list>
+        <mat-list-item (click)="logout()" class="parent logout-btn">
+            <mat-icon mat-list-icon>power_settings_new</mat-icon>
+            <span class="full-width" *ngIf="isExpanded || isShowing">Logout</span>
+        </mat-list-item>
+    </mat-nav-list>
+</div>

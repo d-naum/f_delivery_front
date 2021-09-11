@@ -1,0 +1,24 @@
+<h2 class="text-primary">Dashboard</h2>
+<!-- PayPal Checkout Start-------------------------- -->
+<!-- <div *ngIf="!paidFor">
+    <h1>Buy this Couch - ${{ product.price }} OBO</h1>
+</div>
+
+<div *ngIf=paidFor>
+    <h1>Yay, you bought a sweet couch!</h1>
+</div>
+
+<div #paypal></div> -->
+<!-- PayPal Checkout End-------------------------- -->
+<div class="widget">
+    <app-dashboard-cards></app-dashboard-cards>
+</div>
+
+<div class="widget" fxLayout="row" fxLayoutGap="20px">
+    <div fxFlex="50">
+        <app-daily-trending></app-daily-trending>
+    </div>
+    <div fxFlex="50">
+        <app-order-summary></app-order-summary>
+    </div>
+</div>

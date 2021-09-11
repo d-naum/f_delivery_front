@@ -1,0 +1,21 @@
+<span class="example-spacer"></span>
+
+<!-- Notifications -->
+<button mat-icon-button class="header-menus" [matMenuTriggerFor]="notifications" aria-label="Notifications">
+    <mat-icon>notifications</mat-icon>
+</button>
+<mat-menu #notifications="matMenu">
+    <button mat-menu-item>
+        <span>No Notifations</span>
+    </button>
+</mat-menu>
+
+<!-- Messages -->
+<button mat-icon-button class="header-menus" [matMenuTriggerFor]="messages" aria-label="Messages">
+    <mat-icon>mail</mat-icon>
+</button>
+<mat-menu #messages="matMenu">
+    <button mat-menu-item>
+        <span>No Messages</span>
+    </button>
+</mat-menu>

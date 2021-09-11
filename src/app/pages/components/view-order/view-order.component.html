@@ -1,0 +1,70 @@
+<div class="main-wrapper" fxLayoutAlign="center flex-start">
+    <div class="inner-wrapper">
+        <div class="header-wrapper" fxLayoutAlign="space-between center">
+            <div class="header">
+                <mat-icon>local_atm</mat-icon>
+                <span>Order: FD-000{{order.id}}</span>
+            </div>
+            <div class="header">
+                <button (click)="cancelOrder(order.id)" type="button" class="danger-btn">
+                    <mat-icon>clear</mat-icon>Cancel
+                </button>
+                <button (click)="completeOrder(order.id)" type="button" class="success-btn">
+                    <mat-icon>check</mat-icon>Complete
+                </button>
+            </div>
+        </div>
+
+        <div class="amount-wrapper" fxLayoutAlign="flex-start center">
+            <h1>${{order.amount.toFixed(2)}}</h1>
+            <span class="status-tag">{{order.status ? order.status.name : 'Unknown Status'}}</span>
+        </div>
+
+        <div class="customer-info">
+            <div class="info-wrapper">
+                <span>Date & Time</span>
+                <span>{{order.deliveryDate}}</span>
+            </div>
+            <div class="info-wrapper">
+                <span>Company Name</span>
+                <span>{{order.company.name}}</span>
+            </div>
+            <div class="info-wrapper">
+                <span>Customer Name</span>
+                <span>{{order.client.firstName}} {{order.client.lastName}}</span>
+            </div>
+            <div class="info-wrapper">
+                <span>Email</span>
+                <span>{{order.client.email}}</span>
+            </div>
+            <div class="info-wrapper">
+                <span>Contact</span>
+                <span>{{order.client.contact}}</span>
+            </div>
+        </div>
+
+        <h1 class="product-header">Products</h1>
+        <div class="products-wrapper">
+            <div class="single-product-header">
+                <span fxFlex="50">Product Name</span>
+                <span fxFlex="15">Category</span>
+                <span fxFlex="10">Price</span>
+                <span fxFlex="10">Quantity</span>
+                <span fxFlex="15">Amount</span>
+            </div>
+            <div class="single-product" *ngFor="let lineItem of order.orderProducts">
+                <span fxFlex="50">{{lineItem.product.title}}</span>
+                <span fxFlex="15">{{lineItem.product.category ? lineItem.product.category.name : 'None'}}</span>
+                <span fxFlex="10">${{lineItem.product.price.toFixed(2)}}</span>
+                <span fxFlex="10">{{lineItem.quantity}}</span>
+                <span fxFlex="15">${{(lineItem.quantity * lineItem.product.price).toFixed(2)}}</span>
+            </div>
+            <div class="single-product">
+                <span fxFlex="80"></span>
+                <span fxFlex="20" fxLayoutAlign="center">
+                    <h2 class="total-amount">Total: ${{order.amount.toFixed(2)}}</h2>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

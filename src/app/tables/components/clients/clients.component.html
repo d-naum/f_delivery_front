@@ -1,0 +1,59 @@
+<div class="mat-elevation-z0">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let element"> {{element.firstName}} {{element.lastName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+            <th mat-header-cell *matHeaderCellDef> Phone </th>
+            <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+        </ng-container>
+        <ng-container matColumnDef="company">
+            <th mat-header-cell *matHeaderCellDef> Company </th>
+            <td mat-cell *matCellDef="let element"> {{element.company}} </td>
+        </ng-container>
+        <ng-container matColumnDef="postCode">
+            <th mat-header-cell *matHeaderCellDef> Post Code </th>
+            <td mat-cell *matCellDef="let element"> {{element.clientAddress.postCode}} </td>
+        </ng-container>
+        <ng-container matColumnDef="city">
+            <th mat-header-cell *matHeaderCellDef> City </th>
+            <td mat-cell *matCellDef="let element"> {{element.clientAddress.city}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Actions</th>
+            <td mat-cell *matCellDef="let element">
+                <div class="table-action-wrapper">
+                    <button matTooltip="View Client" (click)="viewClient(element.id)" matTooltipPosition="above"
+                        mat-mini-fab color="primary">
+                        <mat-icon>visibility</mat-icon>
+                    </button>
+                    <button matTooltip="Edit Client" (click)="editClient(element.id)" matTooltipPosition="above"
+                        mat-mini-fab color="accent">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button matTooltip="Delete Client" (click)="deleteClient(element.id,element.clientAddress.id)"
+                        matTooltipPosition="above" mat-mini-fab color="warn">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+</div>

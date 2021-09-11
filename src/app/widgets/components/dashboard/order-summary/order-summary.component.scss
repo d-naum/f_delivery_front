@@ -1,0 +1,73 @@
+.card-wrapper {
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+}
+
+.card-wrapper h3 {
+    font-weight: 500;
+}
+
+.card-wrapper table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.card-wrapper table h2, .card-wrapper table p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.card-wrapper table td {
+    padding: 10px 20px;
+}
+
+.card-wrapper table p {
+    font-weight: 300;
+}
+
+.card-wrapper table td {
+    border-left: solid;
+    border-width: 1px;
+    border-color: #ededed;
+}
+
+.card-wrapper table td:first-child {
+    border: none;
+}
+
+
+
+table.single-row-table {
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #ededed;
+    border-spacing: 0;
+    margin-bottom: 30px;
+}
+
+.card-footer {
+    background: #E7FAEC;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.card-footer h3, .card-footer h4 {
+    margin: 0;
+}
+
+.card-footer .order-action {
+    display: flex;
+    align-items: center;
+    color: #bd5700;
+}
+
+.amount-wrapper {
+    width: 7%;
+    background: #2AC155;
+    padding: 6px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+}

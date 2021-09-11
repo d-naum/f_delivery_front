@@ -1,0 +1,59 @@
+.avatar{
+    width:80px;
+    height: 80px;
+    border-radius: 50px;
+    background: rgb(201, 201, 201);
+    font-size: 30px;
+    margin-top: -60px;
+    text-align:center;
+    margin-bottom: 10px;
+    
+}
+.info-wrapper{
+    margin-left:20px;
+    
+}
+
+.detail-wrapper{
+    margin-top:10px;
+    h3, h2{ 
+        margin:3px 0;
+        display: flex;
+        align-items: flex-start;
+        text-align:left;
+    }
+    mat-icon{
+        margin-right:5px;
+        font-size:22px
+    }
+    strong{
+        margin-right:10px
+    }
+}
+
+.heading{
+    margin:5px 0;
+    margin-top:10px
+}
+
+.container{
+    overflow: visible;
+}
+
+.details-wrapper .detail-wrapper {
+    margin: 0;
+}
+
+.detail-wrapper {}
+
+.details-wrapper {
+    border: solid;
+    border-width: 1px;
+    border-bottom: 0;
+}
+
+.details-wrapper .detail {
+    border-bottom: solid;
+    border-width: 1px;
+    padding: 2px;
+}

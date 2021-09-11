@@ -1,0 +1,130 @@
+.amount-wrapper{
+    h1
+    {
+        margin:0;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    margin: 20px 0;
+}
+
+.inner-wrapper{
+    width:100%;
+}
+
+span.status-tag {
+    margin-left: 10px;
+    background: #d9d9d9;
+    padding: 0px 12px;
+    border-radius: 18px;
+    font-size: 12px;
+    color: #25202e;
+}
+
+.info-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 16px;
+    span:first-child{
+        font-weight: 500;
+        border-right:none;
+        width:15%;
+    }
+    span{
+        width:20%;
+        border:solid;
+        border-width: 1px;
+        padding:5px;
+        height:25px;
+        border-top:none;
+        border-color: #c1c1c1;
+    }
+}
+
+.info-wrapper:first-child{
+    span{
+        border-top:solid;
+        border-width: 1px;
+        border-color: #c1c1c1;
+    }
+}
+
+.single-product {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: solid;
+    border-width: 1px;
+    border-bottom: none;
+    border-color: #c1c1c1;
+    font-size:16px;
+}
+
+.product-header{
+    margin-top:20px;
+}
+
+.single-product-header{
+    padding:5px 10px;
+    font-size:16px;
+}
+
+.single-product-header {
+    background: lavender;
+}
+
+.single-product:last-child {
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #c1c1c1;
+    
+}
+
+.header{
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    span{
+        margin-left:20px;
+    }
+    mat-icon{
+        font-size:25px
+    }
+}
+
+.total-amount{
+    margin:0
+}
+
+button.success-btn {
+    background: #5fa965;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-left: 10px;
+    display:flex;
+    padding-right:18px;
+    align-items: center;
+    cursor: pointer;
+    mat-icon{
+        margin-right:10px
+    }
+}
+button.danger-btn {
+    background: #a95f5f;
+    border: none;
+    padding: 10px;
+    padding-right:18px;
+    border-radius: 5px;
+    color: white;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    mat-icon{
+        margin-right:10px
+    }
+}

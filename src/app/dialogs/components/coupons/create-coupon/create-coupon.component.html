@@ -1,0 +1,29 @@
+<h3 mat-dialog-title>Create Coupon</h3>
+<div mat-dialog-content>
+    <mat-form-field appearance="fill" class="form-input">
+        <mat-label>Code</mat-label>
+        <input matInput required [formControl]="code" type="number">
+        <mat-error *ngIf="code.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Client</mat-label>
+        <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="client"
+            [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let client of clients" [value]="client.id">
+                {{client.firstName}} {{client.lastName}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field appearance="fill" floatLabel="always" class="form-input">
+        <mat-label>Discount Percentage</mat-label>
+        <input matInput [formControl]="price" type="number" class="example-right-align" placeholder="0">
+        <span matPrefix>%&nbsp;</span>
+        <span matSuffix>.00</span>
+    </mat-form-field>
+</div>
+<div mat-dialog-footer fxLayoutAlign="end end">
+    <button (click)="createCoupon()" mat-raised-button color="primary">
+        Add Coupon
+    </button>
+</div>

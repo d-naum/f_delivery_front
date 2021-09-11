@@ -1,0 +1,90 @@
+.sidebar-wrapper {
+    padding: 25px;
+}
+
+h1.branding-logo {
+    width: 200px;
+}
+
+.example-container {
+  height: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.example-sidenav {
+   user-select: none;
+}
+.full-width {
+  width: 100%;
+}
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+.menu-button.rotated {
+  transform: rotate(180deg);
+}
+.submenu {
+  overflow-y: hidden;
+  transition: transform 300ms ease;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding-left: 30px;
+}
+.submenu.expanded {
+  transform: scaleY(1);
+}
+
+a.link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+a.link-wrapper span {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #a5a5a5;
+}
+
+a.link-wrapper .mat-icon {
+  color: #fff;
+}
+
+.sidebar-list .mat-nav-list {
+  padding: 0;
+  background: #25202e;
+  border-bottom: 1px solid #0d0b11;
+}
+
+.sidebar-wrapper {
+  padding: 8px 25px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-wrapper h1 {}
+
+.sidebar-wrapper h1 {
+  text-align: center;
+}
+
+.branding-logo img{
+  width:100%;
+  padding-top:20px
+}
+
+.logout-btn span{
+color:#a2a2a2;
+font-size: 14px;
+margin-left:10px
+}
+.logout-btn .mat-icon{
+color:white
+}

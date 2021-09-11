@@ -1,0 +1,13 @@
+<h3 mat-dialog-title>Add New Category</h3>
+<div mat-dialog-content>
+    <mat-form-field appearance="fill" class="form-input">
+        <mat-label>Category Name</mat-label>
+        <input matInput required [formControl]="name">
+        <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+</div>
+<div mat-dialog-footer fxLayoutAlign="end end">
+    <button (click)="createCategory()" mat-raised-button color="primary">
+        Add Category
+    </button>
+</div>

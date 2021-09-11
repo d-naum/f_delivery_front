@@ -1,0 +1,61 @@
+<div class="container">
+    <div fxLayout="column" fxLayoutAlign="center center" class="header-wrapper">
+        <div class="avatar" fxLayoutAlign="center center">
+            <mat-icon>person</mat-icon>
+        </div>
+        <div class="info-wrapper" fxLayout="column" fxLayoutAlign="center center">
+            <h2>{{this.data.firstName}} {{this.data.lastName}}</h2>
+        </div>
+    </div>
+    <div fxLayout="column" fxWrap="wrap" class="detail-wrapper">
+        <div class="detail" fxFlex="100">
+            <h3>
+                <mat-icon>email</mat-icon>{{this.data.email}}
+            </h3>
+        </div>
+        <div class="detail" fxFlex="100">
+            <h3>
+                <mat-icon>phone</mat-icon>{{this.data.phone}}
+            </h3>
+        </div>
+    </div>
+    <h2 class="heading">Address</h2>
+
+    <div class="details-wrapper">
+        <div fxLayout="column" fxWrap="wrap" class="detail-wrapper">
+            <div class="detail" fxFlex="100">
+                <h3>
+                    <strong>Street: </strong> {{this.data.clientAddress.street}}
+                </h3>
+            </div>
+            <div class="detail" fxFlex="100">
+                <h3>
+                    <strong>Street No: </strong> {{this.data.clientAddress.streetNo}}
+                </h3>
+            </div>
+        </div>
+        <div fxLayout="column" fxWrap="wrap" class="detail-wrapper">
+            <div class="detail" fxFlex="100">
+                <h3>
+                    <strong>Floor: </strong> {{this.data.clientAddress.floor}}
+                </h3>
+            </div>
+            <div class="detail" fxFlex="100">
+                <h3>
+                    <strong>City: </strong> {{this.data.clientAddress.city}}
+                </h3>
+            </div>
+        </div>
+        <div fxLayout="row" fxWrap="wrap" class="detail-wrapper">
+            <div class="detail" fxFlex="100">
+                <h3>
+                    <strong>Postcode: </strong> {{this.data.clientAddress.postCode}}
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxWrap="wrap" fxLayoutAlign="flex-end center" class="detail-wrapper">
+        <button mat-raised-button color="primary">View Payments</button>
+    </div>
+</div>

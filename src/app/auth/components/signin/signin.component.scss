@@ -1,0 +1,47 @@
+img{
+    width:70%
+}
+
+.body{ 
+    min-height: 100vh;
+    background:#1f1c23
+}
+
+.main-container{
+    height: 60vh;
+    box-shadow: 5px 8px 10px #0000001f;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.form-section{
+    background:#d8d8d8;
+}
+
+.logo-section{
+    background:#221341;
+    height:100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.sectionWrapper{
+height:100%;
+}
+
+.full-width{
+    width:100%;
+    margin-bottom: 20px;
+}
+.login-form{
+    padding: 0 60px;
+}
+
+.button{
+    width:40%;
+    border-radius: 40px;
+    background: #221341
+}
+h1{
+    margin-bottom: 3rem;
+}
